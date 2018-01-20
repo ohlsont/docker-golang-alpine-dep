@@ -30,7 +30,7 @@ RUN apk add -qU --no-cache -t .build-deps curl gcc musl-dev linux-headers \
 
 # Add install and config files
 COPY entrypoint-dogstatsd.sh /entrypoint.sh
-COPY dogstatsd/supervisor-alpine.conf $DD_HOME/agent/supervisor.conf
+COPY supervisor-alpine.conf $DD_HOME/agent/supervisor.conf
 COPY config_builder.py /config_builder.py
 
 # Add healthcheck script
